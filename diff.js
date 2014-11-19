@@ -679,7 +679,7 @@ function diff_cleanupSemanticLossless(diffs) {
       var equality2 = diffs[pointer + 1][1];
 
       // First, shift the edit as far left as possible.
-      var commonOffset = this.diff_commonSuffix(equality1, edit);
+      var commonOffset = diff_commonSuffix(equality1, edit);
       if (commonOffset) {
         var commonString = edit.substring(edit.length - commonOffset);
         equality1 = equality1.substring(0, equality1.length - commonOffset);
